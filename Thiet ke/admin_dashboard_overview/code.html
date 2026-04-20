@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#007168",
+                        "secondary": "#006a62",
+                        "on-background": "#191c1d",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-fixed-variant": "#683d00",
+                        "on-tertiary-fixed": "#2c1700",
+                        "on-surface": "#191c1d",
+                        "tertiary-fixed": "#ffdcbc",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#accbe0",
+                        "tertiary-fixed-dim": "#ffb86b",
+                        "tertiary": "#341c00",
+                        "inverse-primary": "#accbe0",
+                        "on-secondary-fixed-variant": "#005049",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-fixed": "#00201d",
+                        "surface": "#f8f9fa",
+                        "on-surface-variant": "#42474c",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "primary-container": "#1b3a4b",
+                        "primary-fixed": "#c8e7fd",
+                        "secondary-container": "#70f8e8",
+                        "surface-container-low": "#f3f4f5",
+                        "primary": "#012435",
+                        "surface-tint": "#446274",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-container": "#edeeef",
+                        "on-tertiary-container": "#e48b00",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-fixed-variant": "#2c4a5c",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#85a4b8",
+                        "outline-variant": "#c2c7cc",
+                        "surface-dim": "#d9dadb",
+                        "background": "#f8f9fa",
+                        "inverse-surface": "#2e3132",
+                        "on-primary-fixed": "#001e2d",
+                        "secondary-fixed": "#70f8e8",
+                        "secondary-fixed-dim": "#4fdbcc",
+                        "tertiary-container": "#512e00",
+                        "surface-bright": "#f8f9fa",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#72787c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .neon-inner-glow {
+            box-shadow: inset 0 0 4px rgba(0, 106, 98, 0.2);
+        }
+        .digital-bloom {
+            box-shadow: 0px 16px 40px rgba(27, 58, 75, 0.06);
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #f8f9fa;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+</head>
+<body class="text-on-background antialiased">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-screen w-64 z-50 bg-[#012435] flex flex-col py-8 shadow-[0px_16px_40px_rgba(27,58,75,0.06)]">
+<div class="px-6 mb-10">
+<h1 class="text-2xl font-bold tracking-tighter text-white font-['Space_Grotesk'] uppercase">PRECISION</h1>
+<p class="text-[10px] font-mono uppercase tracking-widest text-slate-400 mt-1">Clinical Architect v1.0</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-6 py-3 bg-white/10 text-[#006a62] border-r-4 border-[#006a62] transition-all duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="dashboard">dashboard</span>
+<span class="font-label text-sm uppercase tracking-wider font-semibold">Command Center</span>
+</a>
+<a class="flex items-center px-6 py-3 text-slate-400 hover:text-white hover:bg-white/5 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="group">group</span>
+<span class="font-label text-sm uppercase tracking-wider">Patient Registry</span>
+</a>
+<a class="flex items-center px-6 py-3 text-slate-400 hover:text-white hover:bg-white/5 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="vital_signs">vital_signs</span>
+<span class="font-label text-sm uppercase tracking-wider">Vitals Monitor</span>
+</a>
+<a class="flex items-center px-6 py-3 text-slate-400 hover:text-white hover:bg-white/5 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="grid_view">grid_view</span>
+<span class="font-label text-sm uppercase tracking-wider">Resource Grid</span>
+</a>
+<a class="flex items-center px-6 py-3 text-slate-400 hover:text-white hover:bg-white/5 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="database">database</span>
+<span class="font-label text-sm uppercase tracking-wider">System Logs</span>
+</a>
+<a class="flex items-center px-6 py-3 text-slate-400 hover:text-white hover:bg-white/5 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="security">security</span>
+<span class="font-label text-sm uppercase tracking-wider">Security</span>
+</a>
+</nav>
+<div class="px-6 mt-auto space-y-4">
+<button class="w-full py-3 bg-tertiary text-white font-headline font-bold text-xs tracking-widest hover:brightness-125 transition-all">
+                EMERGENCY OVERRIDE
+            </button>
+<div class="pt-4 space-y-1">
+<a class="flex items-center text-slate-400 hover:text-white text-sm py-2 transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="settings">settings</span>
+<span class="font-label uppercase tracking-widest text-[11px]">Settings</span>
+</a>
+<a class="flex items-center text-slate-400 hover:text-white text-sm py-2 transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="contact_support">contact_support</span>
+<span class="font-label uppercase tracking-widest text-[11px]">Support</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 z-40 bg-white/80 backdrop-blur-xl flex justify-between items-center px-8">
+<div class="flex items-center bg-surface-container-low px-4 py-2 w-96 focus-within:ring-2 focus-within:ring-[#006a62]">
+<span class="material-symbols-outlined text-slate-400 mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-body w-full" placeholder="Search clinical records..." type="text"/>
+</div>
+<div class="flex items-center space-x-8">
+<nav class="hidden lg:flex space-x-6">
+<a class="text-slate-500 font-medium hover:text-[#006a62] transition-colors font-label text-sm" href="#">Analytics</a>
+<a class="text-slate-500 font-medium hover:text-[#006a62] transition-colors font-label text-sm" href="#">Staffing</a>
+<a class="text-slate-500 font-medium hover:text-[#006a62] transition-colors font-label text-sm" href="#">Inventory</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="text-slate-500 hover:text-[#006a62] transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-tertiary-fixed-dim rounded-full"></span>
+</button>
+<button class="text-slate-500 hover:text-[#006a62] transition-colors">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-8 w-8 bg-primary-container overflow-hidden">
+<img alt="Clinic Administrator Avatar" class="w-full h-full object-cover" data-alt="Close up professional headshot of a female doctor with a serious authoritative expression in a clinical setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOIqJ3gu3hB9vHwNR2h1A7mWEt1PfZ3o6w9krSpxLfArThF6UdGE3GRTZ0ggCow8XbV7jZCVBeN1WnK49tgpsoeK7lxl36Gzauy8gLiS87BxdWb5SLEhETso_y4xxG4bNiD6-Q-LXkxQR7IhOQpoBigVQj12CnsgSjHSOKPMZHydRe6bLm6uDWqp7KiU76N4LlwCJNum8YrTIo9yVuv_vp3ndyuiKGZD3f1JFg3iIuUG7gtSPfMN43axrpv1anZfR1FzGuWWxInVc"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 pt-24 pb-16 px-8 min-h-screen">
+<header class="mb-10">
+<h2 class="text-4xl font-bold text-primary font-headline tracking-tighter">Dashboard</h2>
+<div class="flex items-center space-x-2 text-slate-400 mt-2">
+<span class="text-[10px] font-mono uppercase tracking-widest">System Status:</span>
+<span class="flex items-center px-2 py-0.5 bg-secondary/10 text-secondary text-[10px] font-bold uppercase tracking-tighter neon-inner-glow">
+                    Operational
+                </span>
+<span class="text-slate-300">|</span>
+<span class="text-[10px] font-mono uppercase tracking-widest">Last Sync: 14:02:11 GMT</span>
+</div>
+</header>
+<!-- KPI Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<!-- Total Users -->
+<div class="bg-surface-container-lowest p-6 digital-bloom border-l-4 border-primary">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-slate-500 font-bold">Total Patients</span>
+<span class="material-symbols-outlined text-primary/40" data-icon="person">person</span>
+</div>
+<div class="text-3xl font-headline font-bold text-primary">15,420</div>
+<div class="mt-2 flex items-center text-secondary text-xs font-bold">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="trending_up">trending_up</span>
+                    +12.5% <span class="text-slate-400 font-normal ml-1">vs last month</span>
+</div>
+</div>
+<!-- Total Doctors -->
+<div class="bg-surface-container-lowest p-6 digital-bloom border-l-4 border-secondary">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-slate-500 font-bold">Clinical Staff</span>
+<span class="material-symbols-outlined text-secondary/40" data-icon="medical_services">medical_services</span>
+</div>
+<div class="text-3xl font-headline font-bold text-primary">210</div>
+<div class="mt-2 flex items-center text-secondary text-xs font-bold">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="check_circle">check_circle</span>
+                    Active <span class="text-slate-400 font-normal ml-1">98% availability</span>
+</div>
+</div>
+<!-- Total Appointments -->
+<div class="bg-surface-container-lowest p-6 digital-bloom border-l-4 border-secondary">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-slate-500 font-bold">Scheduled Visits</span>
+<span class="material-symbols-outlined text-secondary/40" data-icon="calendar_today">calendar_today</span>
+</div>
+<div class="text-3xl font-headline font-bold text-primary">4,890</div>
+<div class="mt-2 flex items-center text-tertiary-fixed-dim text-xs font-bold">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="pending_actions">pending_actions</span>
+                    84 Pending <span class="text-slate-400 font-normal ml-1">triage</span>
+</div>
+</div>
+<!-- Appointments Trend Sparkline (Simplified concept) -->
+<div class="bg-surface-container-lowest p-6 digital-bloom border-l-4 border-primary overflow-hidden relative">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-slate-500 font-bold">Efficiency Rating</span>
+<span class="material-symbols-outlined text-primary/40" data-icon="analytics">analytics</span>
+</div>
+<div class="text-3xl font-headline font-bold text-primary">94.2%</div>
+<div class="mt-2 h-10 w-full bg-surface-container-low flex items-end space-x-1">
+<div class="w-full bg-secondary/20 h-4"></div>
+<div class="w-full bg-secondary/30 h-6"></div>
+<div class="w-full bg-secondary/40 h-8"></div>
+<div class="w-full bg-secondary/60 h-10 border-t-2 border-secondary"></div>
+<div class="w-full bg-secondary/40 h-7"></div>
+<div class="w-full bg-secondary/20 h-5"></div>
+</div>
+</div>
+</div>
+<!-- Main Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Line Chart Section -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-8 digital-bloom">
+<div class="flex justify-between items-center mb-10">
+<div>
+<h3 class="text-lg font-headline font-bold text-primary uppercase tracking-tight">Appointments Over Time</h3>
+<p class="text-xs text-slate-400 font-label mt-1">Aggregated clinical visit volume across all departments</p>
+</div>
+<div class="flex space-x-2">
+<button class="px-3 py-1 text-[10px] font-bold uppercase tracking-widest bg-primary text-white">7D</button>
+<button class="px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-slate-500 hover:bg-slate-100">30D</button>
+<button class="px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-slate-500 hover:bg-slate-100">90D</button>
+</div>
+</div>
+<div class="h-80 w-full relative">
+<!-- Faux Line Chart using SVG for precision -->
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 800 300">
+<defs>
+<lineargradient id="gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:rgba(0, 106, 98, 0.1); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(0, 106, 98, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid Lines -->
+<line stroke="#f0f1f2" stroke-width="1" x1="0" x2="800" y1="50" y2="50"></line>
+<line stroke="#f0f1f2" stroke-width="1" x1="0" x2="800" y1="125" y2="125"></line>
+<line stroke="#f0f1f2" stroke-width="1" x1="0" x2="800" y1="200" y2="200"></line>
+<line stroke="#f0f1f2" stroke-width="1" x1="0" x2="800" y1="275" y2="275"></line>
+<!-- Area Fill -->
+<path d="M0,250 L100,220 L200,240 L300,100 L400,150 L500,80 L600,120 L700,50 L800,90 L800,300 L0,300 Z" fill="url(#gradient)"></path>
+<!-- Data Line -->
+<path d="M0,250 L100,220 L200,240 L300,100 L400,150 L500,80 L600,120 L700,50 L800,90" fill="none" stroke="#006a62" stroke-linecap="square" stroke-width="3"></path>
+<!-- Data Points -->
+<circle cx="300" cy="100" fill="#012435" r="4"></circle>
+<circle cx="700" cy="50" fill="#012435" r="4"></circle>
+</svg>
+<!-- X-Axis Labels -->
+<div class="flex justify-between mt-4 text-[10px] font-mono text-slate-400 uppercase tracking-widest">
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span>Sat</span>
+<span>Sun</span>
+</div>
+</div>
+</div>
+<!-- Active Monitoring Panel -->
+<div class="bg-[#012435] p-8 text-white">
+<h3 class="text-lg font-headline font-bold uppercase tracking-tight mb-6">Real-time Vitals</h3>
+<div class="space-y-6">
+<div class="p-4 bg-white/5 neon-inner-glow">
+<div class="flex justify-between items-center mb-2">
+<span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">ICU Occupancy</span>
+<span class="text-xs font-bold text-secondary">88%</span>
+</div>
+<div class="w-full h-1 bg-white/10">
+<div class="h-full bg-secondary" style="width: 88%"></div>
+</div>
+</div>
+<div class="p-4 bg-white/5 neon-inner-glow">
+<div class="flex justify-between items-center mb-2">
+<span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">ER Wait Time</span>
+<span class="text-xs font-bold text-tertiary-fixed-dim">24 MIN</span>
+</div>
+<div class="w-full h-1 bg-white/10">
+<div class="h-full bg-tertiary-fixed-dim" style="width: 45%"></div>
+</div>
+</div>
+<div class="pt-4 border-t border-white/10">
+<h4 class="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-4">Critical Alerts</h4>
+<div class="space-y-3">
+<div class="flex items-start space-x-3 p-3 bg-tertiary/20">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-lg" data-icon="warning">warning</span>
+<div>
+<p class="text-xs font-bold text-white">Blood Bank Shortage</p>
+<p class="text-[10px] text-slate-400 mt-1">O- Negative inventory below threshold.</p>
+</div>
+</div>
+<div class="flex items-start space-x-3 p-3 bg-white/5">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="info">info</span>
+<div>
+<p class="text-xs font-bold text-white">Staffing Shift Complete</p>
+<p class="text-[10px] text-slate-400 mt-1">Night shift logs finalized for 14 units.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Activity / Zebra Table -->
+<div class="mt-8 bg-surface-container-lowest digital-bloom overflow-hidden">
+<div class="px-8 py-6 border-b border-surface-container-high flex justify-between items-center">
+<h3 class="text-lg font-headline font-bold text-primary uppercase tracking-tight">Recent Patient Admissions</h3>
+<button class="text-[10px] font-bold uppercase tracking-widest text-[#006a62] flex items-center">
+                    View Registry <span class="material-symbols-outlined ml-1 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-highest">
+<th class="px-8 py-4 text-[10px] font-bold text-slate-600 uppercase tracking-widest font-label">Patient ID</th>
+<th class="px-8 py-4 text-[10px] font-bold text-slate-600 uppercase tracking-widest font-label">Legal Name</th>
+<th class="px-8 py-4 text-[10px] font-bold text-slate-600 uppercase tracking-widest font-label">Department</th>
+<th class="px-8 py-4 text-[10px] font-bold text-slate-600 uppercase tracking-widest font-label">Admission Time</th>
+<th class="px-8 py-4 text-[10px] font-bold text-slate-600 uppercase tracking-widest font-label">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-surface hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-4 font-mono text-xs text-primary">#PAT-88210</td>
+<td class="px-8 py-4 text-sm font-semibold text-primary">Alexander Thorne</td>
+<td class="px-8 py-4 text-sm text-slate-500">Cardiology</td>
+<td class="px-8 py-4 text-xs text-slate-400">12:45 PM</td>
+<td class="px-8 py-4">
+<span class="px-2 py-0.5 bg-secondary/10 text-secondary text-[10px] font-bold uppercase tracking-tighter neon-inner-glow">Stabilized</span>
+</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<td class="px-8 py-4 font-mono text-xs text-primary">#PAT-88211</td>
+<td class="px-8 py-4 text-sm font-semibold text-primary">Elena Rodriguez</td>
+<td class="px-8 py-4 text-sm text-slate-500">Emergency</td>
+<td class="px-8 py-4 text-xs text-slate-400">01:12 PM</td>
+<td class="px-8 py-4">
+<span class="px-2 py-0.5 bg-tertiary/10 text-tertiary-fixed-dim text-[10px] font-bold uppercase tracking-tighter">Critical</span>
+</td>
+</tr>
+<tr class="bg-surface hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-4 font-mono text-xs text-primary">#PAT-88212</td>
+<td class="px-8 py-4 text-sm font-semibold text-primary">Marcus Holloway</td>
+<td class="px-8 py-4 text-sm text-slate-500">Neurology</td>
+<td class="px-8 py-4 text-xs text-slate-400">01:30 PM</td>
+<td class="px-8 py-4">
+<span class="px-2 py-0.5 bg-surface-container-highest text-slate-600 text-[10px] font-bold uppercase tracking-tighter">Observing</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-[calc(100%-16rem)] ml-64 py-4 px-8 border-t border-slate-100 flex justify-between items-center bg-slate-50">
+<p class="text-[10px] font-mono uppercase tracking-widest text-slate-400">© 2024 Clinical Architect Systems. High-Fidelity Data Environment.</p>
+<div class="flex space-x-6">
+<a class="text-[10px] font-mono uppercase tracking-widest text-slate-400 hover:text-slate-900 transition-colors" href="#">Privacy Protocol</a>
+<a class="text-[10px] font-mono uppercase tracking-widest text-slate-400 hover:text-slate-900 transition-colors" href="#">Service Level Agreement</a>
+<a class="text-[10px] font-mono uppercase tracking-widest text-slate-400 hover:text-slate-900 transition-colors" href="#">Data Sovereignty</a>
+</div>
+</footer>
+</body></html>
